@@ -1,0 +1,10 @@
+<h1>Create Account</h1>
+
+<form action="<%= users_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="user[username]" placeholder="username"><br>
+  <input type="password" name="user[password]" placeholder="password"><br>
+  <p style="font-size:8px; color:light-gray;">Password must be at least six characters</p>
+  <%= render partial: 'shared/errors' %>
+  <input type="submit" name="Create!">
+</form>
